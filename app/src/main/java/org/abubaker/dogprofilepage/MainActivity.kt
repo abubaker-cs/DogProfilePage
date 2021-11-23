@@ -8,6 +8,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.sp
 import org.abubaker.dogprofilepage.ui.theme.DogProfilePageTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                 Surface(color = MaterialTheme.colors.background) {
 
                     // Declare the text for the Greeting()
-                    Greeting("Android")
+                    Greeting("Abubaker")
 
                 }
 
@@ -43,15 +44,29 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
 
-    //
     Text(text = "Hello $name!")
 
 }
 
+@Composable
+fun MyApp() {
+    Text(
+        text = "Welcome to this course!",
+        fontSize = 30.sp
+    )
+}
+
+
+/**
+ * Preview in the Design Editor
+ */
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    DogProfilePageTheme {
-        Greeting("Android")
-    }
+
+    MyApp()
+
+//    DogProfilePageTheme {
+//        Greeting("Welcome to Tutorials.EU")
+//    }
 }
