@@ -12,21 +12,40 @@ import org.abubaker.dogprofilepage.ui.theme.DogProfilePageTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // onCreate()
         super.onCreate(savedInstanceState)
+
+        // Initialize...
         setContent {
+
+            // Theme
             DogProfilePageTheme {
+
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
+
+                    // Declare the text for the Greeting()
                     Greeting("Android")
+
                 }
+
             }
+
         }
+
     }
 }
 
+/**
+ * UI Components created using JetPack Compose
+ */
 @Composable
 fun Greeting(name: String) {
+
+    //
     Text(text = "Hello $name!")
+
 }
 
 @Preview(showBackground = true)
